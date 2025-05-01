@@ -1,0 +1,227 @@
+/* تنظیمات فونت بی نازنین */
+@font-face {
+    font-family: 'B Nazanin';
+    src: url('https://cdn.fontsup.com/font/B_Nazanin/B_Nazanin.woff2') format('woff2'),
+         url('https://cdn.fontsup.com/font/B_Nazanin/B_Nazanin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* اعمال فونت بی نازنین به تمام صفحات */
+html, body {
+    font-size: 21px; /* یا هر مقدار دلخواهی برای بزرگتر کردن */
+    font-family: 'B Nazanin', sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* این باعث میشه main فضای قابل گسترش بگیره */
+main {
+    flex: 1;
+}
+
+body {
+    font-family: 'B Nazanin', sans-serif;
+    margin: 0;
+    background-color: #f0f8ff;
+    color: #003366;
+    direction: rtl;
+}
+
+header {
+    background-color: #0077cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* استایل دکمه محصولات */
+.dropdown {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.dropbtn {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.dropbtn:hover {
+    background-color: #005fa3;
+}
+
+/* استایل برای منو کشویی */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f0f8ff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.dropdown-content a {
+    color: #003366;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* نمایش منو هنگام هاور */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.intro, .products, .contact-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products h3 {
+    margin-bottom: 1rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact-button {
+    text-align: center;
+    margin: 2rem;
+}
+
+.contact-button a {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* استایل برای دکمه واتساپ */
+.whatsapp-button {
+    margin-top: 2rem;
+}
+
+.whatsapp-button a {
+    background-color: #25D366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+/* استایل ریسپانسیو */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .dropdown {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropbtn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-button a {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .dropdown .dropbtn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .contact-button a {
+        padding: 1.2rem;
+    }
+}
